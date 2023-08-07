@@ -1,0 +1,9 @@
+#!/bin/bash
+# Read input from command-line or standard input
+if [ -t 0 ]; then
+    # If no input is provided, exit with an error message
+    echo "Usage: echo 'Chicago' | $0"
+    exit 1
+fi
+# Remove all occurrences of 'c' and 'C' from the input using tr
+tr -d 'cC'
